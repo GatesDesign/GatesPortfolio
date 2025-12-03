@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NexLume | Portfolio</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="header glass">
+    <div class="logo">NexLume(GatesTek)</div>
+
+    <nav class="nav">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- MOBILE MENU BUTTON -->
+    <div class="menu-btn">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- ================= HERO ================= -->
+  <section id="hero" class="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm <span>Ismail Oluwatobi Awolowo</span></h1>
+      <p class="hero-text">
+        A Passionate Software Developer, Data Scientist & Product Designer crafting
+        clean, modern and user-focused digital experiences.
+      </p>
+
+      <a href="#projects" class="btn primary-btn">Explore Projects</a>
+    </div>
+
+    <div class="hero-circle"></div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section id="about" class="about section">
+    <h2 class="section-title">About Me</h2>
+
+    <p class="about-text">
+      I create functional and visually appealing software solutions.
+      My work blends creativity, technical expertise and attention to detail
+      to build products that make a real impact.
+    </p>
+
+    <div class="skills-box">
+      <h3>Technical Skills</h3>
+
+      <ul class="skills-list">
+        <li><i class="fa-solid fa-code"></i> HTML, CSS, JavaScript...</li>
+        <li><i class="fa-solid fa-terminal"></i> Python, PHP, Node.js...</li>
+        <li><i class="fa-solid fa-pen-nib"></i> UI/UX Design...</li>
+        <li><i class="fa-solid fa-layer-group"></i> React, Bootstrap...</li>
+        <li><i class="fa-solid fa-database"></i> MySQL, MongoDB...</li> 
+        <li><i class="fa-solid fa-cloud"></i> AWS, Heroku...</li>
+        <li><i class="fa-solid fa-cogs"></i> DevOps, CI/CD...</li>
+        <li><i class="fa-solid fa-chart-line"></i> Data Analysis, ML...</li>
+        <li><i class="fa-solid fa-mobile-screen-button"></i> Responsive Design...</li>
+        <li><i class="fa-solid fa-robot"></i> Automation Scripting...</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTS ================= -->
+  <section id="projects" class="projects section">
+    <h2 class="section-title">Featured Projects</h2>
+
+    <div class="project-grid">
+
+      <div class="project-card glass">
+        <h3>Project One</h3>
+        <p>Gates‑Properties is a modern, web‑based real estate listing platform prototype, designed to showcase my capabilities in full‑stack development, UI/UX design, and real‑estate web application architecture. It represents a functional, visually appealing and scalable property portal that can serve as the foundation for a real estate agency, property manager, or rental marketplace.</p>
+        <a href="https://gates-properties.vercel.app/" target="_blank" class="project-link">View Project →</a>
+      </div>
+
+      <div class="project-card glass">
+        <h3>Project Two</h3>
+        <p>Gates‑Mart is a clean, modern e‑commerce web store prototype, built to demonstrate my full‑stack development and UI/UX design capabilities through a functional, user‑friendly online shopping experience. It reflects my ability to design and implement scalable, responsive web applications tailored for retail or digital commerce.</p>
+        <a href="https://gates-mart.vercel.app/" target="_blank" class="project-link">View Project →</a>
+      </div>
+
+      <div class="project-card glass">
+        <h3>Project Three</h3>
+        <p>GatesFlix is a sleek, modern web-based streaming platform prototype designed to showcase my skills in full-stack web development, UI/UX design, and responsive web application development. Built using contemporary web technologies, it demonstrates both functional design and visual appeal for a digital entertainment platform.</p>
+        <a href="https://gatesflix.vercel.app/" target="_blank" class="project-link">View Project →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section id="contact" class="contact section">
+    <h2 class="section-title">Get In Touch</h2>
+
+    <p class="contact-text">
+      Feel free to reach out for collaborations or inquiries.
+    </p>
+
+    <p class="email">ismailoladipupo43@gmail.com</p>
+
+    <div class="social-links">
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    © <span id="year"></span> NexLume(GatesTek) — Crafted with passion.
+  </footer>
+
+  <!-- ================= JS ================= -->
+  <script>
+    // Hamburger menu toggle
+    const menuBtn = document.querySelector(".menu-btn");
+    const nav = document.querySelector(".nav");
+
+    menuBtn.addEventListener("click", () => {
+      nav.classList.toggle("active");
+    });
+
+    // Update footer year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

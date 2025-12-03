@@ -1,0 +1,268 @@
+/* ------------ GLOBAL RESET ------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: #ffffff;
+  background: #0d0f17;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Glass Effect */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ------------ HEADER ------------ */
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 15px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+}
+
+.nav a {
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.nav a:hover {
+  color: #00c7ff;
+}
+
+/* Mobile Menu Button */
+.menu-btn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #00c7ff;
+}
+
+/* ------------ HERO ------------ */
+.hero {
+  min-height: 100vh;
+  padding: 0 8%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  line-height: 1.2;
+}
+
+.hero-content h1 span {
+  color: #00c7ff;
+}
+
+.hero-text {
+  max-width: 500px;
+  margin: 20px 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 6px;
+  margin-top: 15px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background: #00c7ff;
+  color: #0d0f17;
+}
+
+.primary-btn:hover {
+  background: #009fce;
+}
+
+.hero-circle {
+  position: absolute;
+  right: 5%;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00c7ff33, #00c7ff05);
+}
+
+/* ------------ SECTIONS ------------ */
+.section {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #00c7ff;
+}
+
+/* ------------ ABOUT ------------ */
+.about-text {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.skills-box {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+}
+
+.skills-list {
+  list-style: none;
+}
+
+.skills-list li {
+  margin: 10px 0;
+  font-size: 1.05rem;
+}
+
+.skills-list i {
+  margin-right: 8px;
+  color: #00c7ff;
+}
+
+/* ------------ PROJECTS ------------ */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.project-card {
+  padding: 25px;
+  border-radius: 10px;
+  transition: 0.3s ease, transform 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  border-color: #00c7ff;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 10px;
+  color: #00c7ff;
+  font-weight: 600;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+/* ------------ CONTACT ------------ */
+.contact-text,
+.email {
+  margin: 10px 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+  color: #00c7ff;
+}
+
+.social-links a:hover {
+  color: #009fce;
+}
+
+/* ------------ FOOTER ------------ */
+.footer {
+  padding: 20px 8%;
+  text-align: center;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* ------------ RESPONSIVE BREAKPOINTS ------------ */
+
+/* Tablets & Large Phones */
+@media (max-width: 992px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-circle {
+    display: none;
+  }
+
+  .nav {
+    position: absolute;
+    top: 70px;
+    right: 8%;
+    background: rgba(7, 0, 0, 0.05);
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: none; /* Hidden initially */
+    z-index: 999;
+    width: 200px;
+  }
+
+  .nav.active {
+    display: flex; /* Shown when menu is toggled */
+  }
+
+  .menu-btn {
+    display: block;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 600px) {
+  .header {
+    padding: 12px 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .project-grid {
+    gap: 15px;
+  }
+}
